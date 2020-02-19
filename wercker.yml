@@ -15,4 +15,4 @@ build:
           export DBURI=$DBURI
           echo $DBURI
           echo "node version $(node -v) running"
-          echo "npm version $(npm -v) running
+          echo "npm version $(npm -v) running"
