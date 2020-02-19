@@ -12,15 +12,7 @@ build:
         name: echo nodejs information
         # Here we are declaring an environment variable to use it latter in our application
         code: |
+          export DBURI=$DBURI
+          echo $DBURI
           echo "node version $(node -v) running"
-          echo "npm version $(npm -v) running"
-push:
-  steps:
-    - internal/docker-push:
-            entrypoint: node index.js
-            working-dir: $WERCKER_ROOT
-            tag: $WERCKER_GIT_COMMIT
-            ports: "80"
-            username: $DOCKER_USERNAME
-            password: $OCI_AUTH_TOKEN
-            repository: $DOCKER_REGISTRY/$DOCKER_REPO
+          echo "npm version $(npm -v) running
